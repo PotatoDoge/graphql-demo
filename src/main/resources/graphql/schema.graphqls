@@ -1,0 +1,21 @@
+# Every GraphQL schema has a top-level Query type, and the fields under it are
+# the query operations exposed by the application.
+# Here the schema defines one query called bookById that
+# returns the details of a specific book.
+
+type Query{
+    bookById(id:ID): Book
+}
+
+type Book {
+    id: ID
+    name:String
+    pageCount: Int
+    author:Author
+}
+
+type Author{
+    id: ID
+    firstName: String
+    lastName: String
+}
